@@ -1,0 +1,455 @@
+body, html {
+    overflow-x: hidden; 
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    border: 8px solid black;
+    border-style: double;
+    border-bottom: none;
+}
+
+.text-number {
+    font-size: 1.2rem; 
+}
+
+.logo-img {
+    max-width: 100px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.navbar-text {
+    font-size: 1.5rem; 
+}
+
+.text-indent {
+    text-indent: 20px; 
+    text-align: justify;
+    color: #ffffff;
+}
+
+
+.text-center {
+    z-index: 1;
+    position: relative;
+}
+
+.body-style {
+    background: linear-gradient(
+        /* rgb(138, 112, 75), 
+        rgb(44, 34, 22)  */
+        rgb(173, 146, 105), 
+        rgb(20, 17, 10) 
+    );
+    background-image: url(imagem-fundo3.png);
+    background-size: cover;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blink 1.5s infinite;
+}
+
+.btn-custom:hover {
+    background-color: darkgreen; 
+    animation: none; /* Remove a animação quando o botão for clicado ou estiver com o mouse sobre ele */
+}
+
+.contact-icon {
+    width: 24px ;
+    height: 24px ;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.text-number, .email-text {
+    font-size: 16px;
+}
+
+
+
+/* Alinhamento dos itens do rodapé */
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.text-number, .email-text {
+    font-size: 16px;
+}
+
+/* Manter a altura das colunas iguais */
+.row.align-items-stretch {
+    display: flex;
+}
+
+.col-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome {
+    background-color:rgb(92, 71, 46);
+    font-size: 1.8rem;
+    padding:2%;
+}
+
+.text-principal {
+    font-size: 3rem;
+}
+
+
+.navbar {
+    height: 25vh; /* 20% da altura da viewport */
+}
+
+footer {
+    height: 9vh; /* 20% da altura da viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 60vh; /* 60% da altura da viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advogada-img {
+    position: absolute;
+    right: 10%;
+    bottom: 15vh;
+    height: 60vh; 
+    opacity: 1; /* Leve transparência para ajudar na mistura */
+    mix-blend-mode: multiply; /* Mistura de cores com o fundo */
+    z-index: -1;
+}
+
+.texto-advogada {
+    color:white;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto vertical e horizontalmente */
+    font-size: 5rem;
+    /* z-index: 1; */
+    background-color:rgb(65, 48, 29);
+
+}
+
+.justica {
+    position:absolute;
+    height:68vh;
+    bottom:15vh;
+    left:10%;
+}
+
+.marginx {
+    width:75% !important;
+}
+footer .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Espaçamento entre colunas em telas pequenas */
+}
+
+.espaco {
+    height:5%;
+}
+.eliminar{}
+
+@media (max-width: 359.98px) {
+    body, html {
+        border: 4px solid black;
+    }
+    .btn-custom {
+        padding:1px;
+        font-size: 0.75rem;
+    }
+    .texto-advogada{
+        height:8%;
+        width:auto;
+    }
+    .advogada-img {
+        height:32%;
+        width:auto;
+        bottom:33%;
+        right:-3%;
+    }
+    .justica {
+        height:38%;
+        width:auto;
+        bottom:33%;
+        left:-3%;
+    }
+    
+    .nome {
+        font-size: 0.84rem;
+        padding:1px;
+        margin:0px;
+    }
+    .eliminar {
+        margin: 0 !important;
+        padding: 0 !important;
+        display:inline-block;
+    }
+    .logo-img {
+        width:100%; 
+        height:auto;
+        margin:0px;
+        padding: 0; 
+
+    }
+    .d-flex.align-items-center.borda.eliminar {
+        max-width: 30px;
+        width: auto; /* Garante que o contêiner só ocupe o espaço necessário */
+        white-space: nowrap; /* Evita que os elementos dentro da div sejam quebrados em múltiplas linhas */
+    }
+    .container-fluid.d-flex {
+        justify-content: space-between !important; /* Garante que os elementos estejam separados sem margem extra */
+    }
+    .navbar-brand {
+        margin: 0; /* Remove qualquer margem do link que envolve o logo */
+        padding: 0; /* Remove qualquer padding do link que envolve o logo */
+    }
+
+    /* Certifique-se de que o contêiner ao redor também não tem margem ou padding indesejados */
+    .navbar .d-flex {
+        margin: 0; /* Remove qualquer margem dos elementos flex */
+        padding: 0; /* Remove qualquer padding dos elementos flex */
+    }
+    .endereco, .text-number, .email-text {
+        font-size: 70%;
+    }
+
+    footer {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .espaco {
+        height: 0vh;
+    }
+    .container {
+        height:58vh;
+    }
+    .container-fluid {
+        width:100% !important;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 575.98px) {
+    body, html {
+        border: 4px solid black;
+    }
+    .btn-custom {
+        padding:2px;
+        font-size: 0.75rem;
+    }
+    .texto-advogada{
+        height:8%;
+        width:auto;
+    }
+    .advogada-img {
+        height:34%;
+        width:auto;
+        bottom:33%;
+        right:-3%;
+    }
+    .justica {
+        height:41%;
+        width:auto;
+        bottom:33%;
+        left:-3%;
+    }
+    
+    .nome {
+        font-size: 0.87rem;
+        padding:1px;
+        margin:0px;
+    }
+    .eliminar {
+        margin: 0 !important;
+        padding: 0 !important;
+        display:inline-block;
+    }
+    .logo-img {
+        width:100%; 
+        height:auto;
+        margin:0px;
+        padding: 0; 
+
+    }
+    .d-flex.align-items-center.borda.eliminar {
+        max-width: 40px;
+        width: auto; /* Garante que o contêiner só ocupe o espaço necessário */
+        white-space: nowrap; /* Evita que os elementos dentro da div sejam quebrados em múltiplas linhas */
+    }
+    .container-fluid.d-flex {
+        justify-content: space-between !important; /* Garante que os elementos estejam separados sem margem extra */
+    }
+    .navbar-brand {
+        margin: 0; /* Remove qualquer margem do link que envolve o logo */
+        padding: 0; /* Remove qualquer padding do link que envolve o logo */
+    }
+
+    /* Certifique-se de que o contêiner ao redor também não tem margem ou padding indesejados */
+    .navbar .d-flex {
+        margin: 0; /* Remove qualquer margem dos elementos flex */
+        padding: 0; /* Remove qualquer padding dos elementos flex */
+    }
+    .endereco, .text-number, .email-text {
+        font-size: 70%;
+    }
+
+    footer {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .espaco {
+        height: 0vh;
+    }
+    .container {
+        height:58vh;
+    }
+    .container-fluid {
+        width:100% !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .btn-custom {
+        padding:5px;
+        font-size: 0.9rem;
+    }
+    .texto-advogada{
+        height:8%;
+        width:auto;
+    }
+    .advogada-img {
+        height:38%;
+        width:auto;
+        bottom:28%;
+        right:0%;
+    }
+    .justica {
+        height:45%;
+        width:auto;
+        bottom:28%;
+        left:0%;
+    }
+    .nome {
+        font-size: 1.23rem;
+        padding:1%;
+    }
+    .logo-img {
+        width:70%; 
+        height:auto;
+    }
+    .endereco, .text-number, .email-text {
+        font-size: 90%;
+    }
+
+    footer {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .espaco {
+        height: 0vh;
+    }
+    .container {
+        height:58vh;
+    }
+    .container-fluid {
+        width:100% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .texto-advogada{
+        height:8%;
+        width:auto;
+    }
+    .advogada-img {
+        height:43%;
+        width:auto;
+        bottom:20%;
+        right:4%;
+    }
+    .justica {
+        height:55%;
+        width:auto;
+        bottom:20%;
+        left:4%;
+    }
+    .endereco, .text-number, .email-text {
+        font-size: 80%;
+    }
+    .espaco {
+        height: 0vh;
+    }
+    .container {
+        height: 65vh;
+    }
+    .container-fluid {
+        width:100% !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .btn-custom {
+        padding:10px;
+    }
+    .texto-advogada{
+        width: 30%;
+        height:auto;
+    }
+    .advogada-img {
+        height:50%;
+        width:auto;
+    }
+    .justica {
+        height:60%;
+        width:auto;
+    }
+}
+
+@media (min-width: 1200px) { 
+
+}
